@@ -60,7 +60,8 @@ main{
 #headup-display{
     display: flex;
    justify-content: space-between;
-   margin: 2rem;
+   margin:8rem  2rem 0  2rem;
+
 
 }
 .prefix{
@@ -88,9 +89,8 @@ nav a:hover{
 }
 
 .question{
-    width: 450px;
-    flex-wrap: wrap;
-    border: 1px solid black;
+    width: 28.12rem;
+    flex-wrap: wrap;  
     padding: 10px;
     
 
@@ -107,7 +107,7 @@ nav a:hover{
 } */
 .option{
     display: flex;
-    width: 450px;
+    width:  28.12rem;
     height: 40px;
     border: 1px solid #DAE1EA;
     margin: 10px 0;
@@ -140,7 +140,8 @@ nav a:hover{
     display: block;
     font-size: 16px;
     margin: 4px 2px;
-    text-decoration: none;
+    border: none;
+
    
  }
  #next-button button:hover{
@@ -161,4 +162,66 @@ nav a:hover{
 /* /// GAME END SCORE */
 body-score {
     font-weight: bold;
+}
+
+/* Mobile screen size */
+@media only screen and (max-width:465px){
+    #headup-display{
+        display: flex;
+        align-items: flex-end;
+    }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items:baseline;
+        margin: 10px 15px;
+
+    }
+    nav a{
+        margin: 5px;
+    }
+
+  #section{
+       margin: 10px;
+   }
+   .question{
+       margin: 0 0 10px;
+       width: 23rem;
+   }
+   .question h2{
+       font-size: 25px;
+       padding: 10px;
+
+   }
+   .option{
+       font-size: 15px;
+       margin: 0 0 10px;
+       width: 23rem;
+   }
+   #next-button  button{
+        height: 40px;
+        width: 120px;
+        padding: 5px;
+        border: none;
+
+   }
+
+}
+
+/* for very small screens */
+@media only screen and (max-width:386px){
+    .question{
+        margin: 0 0 10px;
+        width: 20rem;
+    }
+    .question h2{
+        font-size: 25px;
+        padding: 10px;
+ 
+    }
+    .option{
+        font-size: 15px;
+        margin: 0 0 10px;
+        width: 20rem;
+    }
 }

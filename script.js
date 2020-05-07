@@ -2,7 +2,7 @@
 const question = document.getElementById('question');
 const options = Array.from(document.getElementsByClassName("option-text"));
 const nextButton = document.getElementById('next-btn');
-const startButton = document.getElementById('start-btn');
+
 const questionCounterNum = document.getElementById('questionCounter');
 const scoreNum = document.getElementById('score');
 
@@ -93,6 +93,10 @@ function getNextQuestion(){
 
 
 };
+
+
+// for next qestion to work
+
  options.forEach(option => {
         option.addEventListener('click',e => {
             if(!acceptingAnswers) return;
@@ -109,8 +113,15 @@ function getNextQuestion(){
                 
             selectedOption.parentElement.classList.add(classToApply);
 
+           
+
             setTimeout(() => {
-                 selectedOption.parentElement.classList.remove(classToApply); getNextQuestion();
+                 selectedOption.parentElement.classList.remove(classToApply); 
+                  nextButton.addEventListener('click',()=>{
+                    getNextQuestion();
+   
+                    })
+                
             }, 1000);
 
            
@@ -125,10 +136,4 @@ function getNextQuestion(){
         scoreNum.innerText = totalScore;
     }
 
-// for next qestion to work
-// nextButton.addEventListener('click',()=>{
-    
-    
-   
-// })
 startGame();
