@@ -117,12 +117,14 @@ function getNextQuestion(){
 
             setTimeout(() => {
                  selectedOption.parentElement.classList.remove(classToApply); 
-                  nextButton.addEventListener('click',()=>{
-                    getNextQuestion();
+                  
+                    
    
-                    })
+                   nextButton.addEventListener('click',()=>{ 
+                    getNextQuestion();
+                   })
                 
-            }, 1000);
+            }, 2000);
 
            
           
